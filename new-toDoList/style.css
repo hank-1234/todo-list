@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background: #eaeaea;
+}
+header {
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+    padding: 32px 0;
+    background: #d5d5d5;
+}
+.cantainer {
+    width: 75vw;
+    height: 99vh;
+    padding: 100px 0 60px 0;
+    margin: 0 auto;
+    background: #eaeaea;
+}
+.list {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    overflow-y: auto;
+}
+.list::-webkit-scrollbar {
+    display: none;
+}
+.list li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #e3e3e3;
+    padding: 10px 10px 10px 30px;
+    margin: 10px 0;
+    transition: opacity .3s;
+}
+.list li.removing {
+    opacity: 0;
+}
+.list li p {
+    flex: 1;
+    margin-right: 20px;
+    font-size: 1.1rem;
+    overflow-wrap: break-word;
+}
+.list li span {
+    flex: end;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.list li.record{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 60px;
+    border-radius: 1%;
+    padding:10px 10px 10px 30px;
+    margin: 15px auto 0 auto;
+}
+.list-input {
+    width: 60%;
+    position: fixed;
+    bottom: 0.1px;
+    right: 20%;
+    display: flex;
+    background: #bbb6b6;
+}
+.list-input.hidden {
+    opacity: 0;
+}
+.list-input textarea {
+    width: 100%;
+    height: 60px;
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    resize: none;
+    background: #bbb6b6;
+    font-size: 1.2rem;
+    scrollbar-width: none;
+}
+.list-input textarea::-webkit-scrollbar {
+    display: none;
+}
+.list-input span {
+    align-self: flex-end;
+    width: 40px;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+.list-input textarea:valid ~ span {
+    display: block;
+}
